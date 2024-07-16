@@ -1,0 +1,42 @@
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+  
+  .month-title {
+    grid-column: 1 / span 7;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  
+  .day-list, .date-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  .day-list li, .date-list li {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .date-list li {
+    border: 1px solid rgb(219, 219, 219);
+    margin: 4px;
+  }
+
+  #july .date-list li:nth-child(n+1):nth-child(-n+31){
+    background-color: rgb(216, 216, 216);
+  }
+
+  #august .date-list li:nth-child(n+4):nth-child(-n+34){
+    background-color: rgb(216, 216, 216);
+  }
+  #september .date-list li:nth-child(n+7):nth-child(-n+36){
+    background-color: rgb(216, 216, 216);
+  }
